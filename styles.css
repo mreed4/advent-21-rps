@@ -58,12 +58,12 @@ li.pick-one img {
 
 /* Winner Page */
 body.winner.you-win {
-  background: url("/images/you-win.svg") left top no-repeat;
+  background: url("./images/you-win.svg") left top no-repeat;
   background-size: auto 100%;
 }
 
 body.winner.computer-wins {
-  background: url("/images/computer-wins.svg") right top no-repeat;
+  background: url("./images/computer-wins.svg") right top no-repeat;
   background-size: auto 100%;
 }
 
