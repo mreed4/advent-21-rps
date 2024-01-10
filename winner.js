@@ -8,9 +8,19 @@ button.addEventListener("click", () => {
 
 window.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
-    window.location.href = "/";
+    playAgain(window.location.pathname);
   }
 });
+
+function playAgain(location) {
+  if (location === "/") {
+    window.location.href = "/";
+  }
+
+  if (location === "/advent-21-rps/") {
+    window.location.href = "/advent-21-rps/";
+  }
+}
 
 function getChoices() {
   const params = new URLSearchParams(window.location.search);
