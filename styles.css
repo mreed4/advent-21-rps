@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
 
 body {
   min-width: 100vw;
   min-height: 100vh;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .wrapper {
-
 }
 
 h1 {
   font-weight: bold;
   font-size: 2rem;
-  text-align: center;;
+  text-align: center;
   margin-bottom: 75px;
 }
 
@@ -36,7 +36,7 @@ li.pick-one {
 li.pick-one button {
   background: none;
   border: 2px solid black;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   cursor: pointer;
   height: 355px;
   width: 325px;
@@ -48,7 +48,7 @@ li.pick-one button {
 }
 
 li.pick-one button:hover {
-  border: 10px solid #FFB800;
+  border: 10px solid #ffb800;
 }
 
 li.pick-one img {
@@ -58,17 +58,18 @@ li.pick-one img {
 
 /* Winner Page */
 body.winner.you-win {
-  background: url('./images/you-win.svg') left top no-repeat;
+  background: url("./images/you-win.svg") left top no-repeat;
   background-size: auto 100%;
 }
 
 body.winner.computer-wins {
-  background: url('./images/computer-wins.svg') right top no-repeat;
+  background: url("./images/computer-wins.svg") right top no-repeat;
   background-size: auto 100%;
 }
 
 body.computer-wins h1.you-win,
-body.you-win h1.computer-wins {
+body.you-win h1.computer-wins,
+body.draw h1 {
   visibility: hidden;
 }
 
@@ -79,11 +80,11 @@ body.winner .wrapper {
 }
 
 body.winner img {
-  mix-blend-mode: multiply;;
+  mix-blend-mode: multiply;
 }
 
 .computer-pick img {
-  transform: scaleX(-1);
+  transform: scaleX(-1); /* Flip the image */
 }
 
 .play-again {
@@ -91,7 +92,7 @@ body.winner img {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 2rem;
   border: 2px solid black;
   background: none;
