@@ -35,7 +35,7 @@ function getWinner(playerChoice) {
   const params = [`playerChoice=${playerChoice}`, `computerChoice=${computerChoice}`];
 
   if (window.location.pathname === "/advent-21-rps/") {
-    window.location.href = `./advent-21-rps/winner.html?${params.join("&")}`;
+    window.location.href = `/advent-21-rps/winner.html?${params.join("&")}`;
   }
 
   if (window.location.pathname === "/") {
