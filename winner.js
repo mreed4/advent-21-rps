@@ -6,6 +6,12 @@ button.addEventListener("click", () => {
   window.location.href = "/";
 });
 
+window.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    window.location.href = "/";
+  }
+});
+
 function getChoices() {
   const params = new URLSearchParams(window.location.search);
   const playerChoice = params.get("playerChoice");
