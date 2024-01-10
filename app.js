@@ -25,11 +25,20 @@ window.addEventListener("keyup", (event) => {
     playerChoice = "scissors";
   }
 
-  getWinner(playerChoice);
+  if (["r", "p", "s"].includes(event.key)) {
+    getWinner(playerChoice);
+  }
 });
 
 function getWinner(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
   const params = [`playerChoice=${playerChoice}`, `computerChoice=${computerChoice}`];
-  window.location.href = `/winner.html?${params.join("&")}`;
+
+  if (window.location.pathname === "/advent-21-rps/") {
+    window.location.href = `./advent-21-rps/winner.html?${params.join("&")}`;
+  }
+
+  if (window.location.pathname === "/") {
+    window.location.href = `./winner.html?${params.join("&")}`;
+  }
 }
