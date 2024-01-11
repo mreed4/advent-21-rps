@@ -34,11 +34,11 @@ function getWinner(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * choices.length)];
   const params = [`playerChoice=${playerChoice}`, `computerChoice=${computerChoice}`];
 
-  if (window.location.pathname === "/advent-21-rps/") {
-    window.location.href = `/advent-21-rps/winner.html?${params.join("&")}`;
+  if (window.location.hostname === "127.0.0.1") {
+    window.location.href = `./winner.html?${params.join("&")}`;
   }
 
-  if (window.location.pathname === "/") {
-    window.location.href = `./winner.html?${params.join("&")}`;
+  if (window.location.hostname.includes("github")) {
+    window.location.href = `/advent-21-rps/winner.html?${params.join("&")}`;
   }
 }

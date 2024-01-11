@@ -3,21 +3,21 @@ const result = compareChoices(playerChoice, computerChoice);
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
-  window.location.href = "/";
+  playAgain(window.location);
 });
 
 window.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
-    playAgain(window.location.pathname);
+    playAgain(window.location);
   }
 });
 
 function playAgain(location) {
-  if (location === "/") {
+  if (location.hostname === "127.0.0.1") {
     window.location.href = "/";
   }
 
-  if (location === "/advent-21-rps/") {
+  if (location.hostname.includes("github")) {
     window.location.href = "/advent-21-rps/";
   }
 }
